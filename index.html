@@ -1,16 +1,15 @@
+Here is a revised index.html for the PPP Agent Auditor repository page.
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<title>PV-PP Agent Auditor | Comprehensive GPT for your AI Agent Environment</title>
-
+<title>PPP Agent Auditor | PV-PP Audit Tool for AI Agent Environments</title>
 <style>
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   padding: 0;
@@ -18,13 +17,11 @@ body {
   background: #f4f6f8;
   color: #222;
 }
-
 .wrapper {
   max-width: 1100px;
   margin: 0 auto;
   padding: 50px 28px 70px;
 }
-
 .hero {
   background: white;
   border: 1px solid #ddd;
@@ -32,28 +29,23 @@ body {
   padding: 42px;
   box-shadow: 0 10px 24px rgba(0,0,0,.05);
 }
-
 h1 {
   margin: 0 0 14px;
   font-size: 3rem;
   line-height: 1.1;
 }
-
 .subtitle {
   font-size: 1.2rem;
   color: #555;
   margin-bottom: 24px;
 }
-
 p {
   line-height: 1.7;
   font-size: 1.08rem;
 }
-
 .buttons {
   margin-top: 26px;
 }
-
 .buttons a {
   display: inline-block;
   margin: 0 12px 12px 0;
@@ -64,40 +56,66 @@ p {
   text-decoration: none;
   font-weight: bold;
 }
-
 .buttons a.secondary {
   background: #666;
 }
-
 .section {
   margin-top: 34px;
 }
-
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   margin-top: 18px;
 }
-
 .card {
   background: white;
   border: 1px solid #ddd;
   border-radius: 14px;
   padding: 24px;
 }
-
 .card h3 {
   margin-top: 0;
   margin-bottom: 12px;
   font-size: 1.35rem;
 }
-
 ul {
   padding-left: 22px;
   line-height: 1.7;
 }
-
+.audit-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+.step {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 20px;
+}
+.step-number {
+  display: inline-block;
+  background: #111;
+  color: white;
+  font-weight: bold;
+  border-radius: 999px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.step h4 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+.step p {
+  margin: 0;
+  font-size: .98rem;
+  color: #444;
+}
 footer {
   margin-top: 42px;
   padding-top: 20px;
@@ -105,120 +123,120 @@ footer {
   color: #666;
   font-size: .95rem;
 }
-
 @media (max-width: 900px) {
-  .grid {
+  .grid,
+  .audit-flow {
     grid-template-columns: 1fr;
   }
-
   h1 {
     font-size: 2.3rem;
   }
-
   .hero {
     padding: 28px;
   }
 }
 </style>
 </head>
-
 <body>
-
 <div class="wrapper">
-
-<div class="hero">
-
-<h1>PV-PP Agent Decision Layer</h1>
-
-<div class="subtitle">
-Primary GPT entry point for the Productive Value / Productive Power (PV-PP) Framework
+  <div class="hero">
+    <h1>PPP Agent Auditor</h1>
+    <div class="subtitle">
+      PV-PP-based audit tool for existing AI agent environments
+    </div>
+    <p>
+      PPP Agent Auditor is a custom GPT built on the Productive Value / Productive Power (PV-PP) framework to help users examine an existing AI agent environment before they expand, automate, or rely on it. It guides the user through a structured audit of what the agent is trying to do, what information it uses, what decisions it makes, and where its perceived state may diverge from reality.
+    </p>
+    <p>
+      The audit focuses on tools, memory, permissions, constraints, feedback loops, hidden assumptions, failure modes, and weak corridors. Its purpose is not to certify an agent as safe or complete, but to surface places where the system may overestimate its own productive power, act from incomplete information, or operate without adequate recovery structure.
+    </p>
+    <div class="buttons">
+      <a href="https://chatgpt.com/g/g-69c115a5b5a081918bb89c23f6b20446-pv-pp-agent-decision-engine/" target="_blank">Launch GPT</a>
+      <a class="secondary" href="https://github.com/AmundsenLance/PV-PP-Agent-Decision-Layer" target="_blank">Repository</a>
+      <a class="secondary" href="https://amundsenlance.github.io/" target="_blank">Main Research Hub</a>
+    </div>
+  </div>
+  <div class="section">
+    <div class="grid">
+      <div class="card">
+        <h3>What It Audits</h3>
+        <ul>
+          <li>Agent purpose, scope, and intended operating environment</li>
+          <li>Available tools, APIs, permissions, and execution authority</li>
+          <li>Memory, stored context, retrieval assumptions, and stale-state risks</li>
+          <li>Input quality, missing information, and false confidence points</li>
+          <li>Decision surfaces where the agent may act from an incomplete model</li>
+          <li>Feedback loops, monitoring, escalation paths, and recovery options</li>
+          <li>Failure modes involving overreach, unsafe automation, or hidden dependency</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Why It Matters</h3>
+        <p>
+          Agent systems often look capable because they can produce fluent answers or trigger tools. That does not mean they understand the real operating environment, know when their information is stale, or have enough feedback to recover from error.
+        </p>
+        <p>
+          PPP Agent Auditor uses the PV-PP distinction between actual productive power and perceived productive power to ask where an agent may believe it can act safely when the surrounding system does not support that belief.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="card">
+      <h3>Audit Flow</h3>
+      <div class="audit-flow">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Map the Agent</h4>
+          <p>Identify the agent’s job, users, tools, memory, permissions, and environment.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Find the Real Capacity</h4>
+          <p>Separate what the agent can actually do from what it appears to be able to do.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Test the Corridors</h4>
+          <p>Check whether the agent has viable paths for task success, correction, escalation, and recovery.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h4>Surface Failure Modes</h4>
+          <p>Identify overreach, missing feedback, unsafe tool use, weak constraints, and hidden assumptions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="grid">
+      <div class="card">
+        <h3>What You Can Use It For</h3>
+        <ul>
+          <li>Audit a prototype agent before deployment</li>
+          <li>Review a custom GPT or tool-using workflow</li>
+          <li>Identify memory, permission, and feedback risks</li>
+          <li>Compare intended capability against actual capability</li>
+          <li>Prepare an agent architecture for safer automation</li>
+          <li>Clarify where human review or escalation remains necessary</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Suggested Starting Questions</h3>
+        <ul>
+          <li>Audit my current AI agent environment.</li>
+          <li>Where might this agent overestimate its own capability?</li>
+          <li>What tools or permissions create the largest failure risk?</li>
+          <li>Where is the agent acting from stale or incomplete information?</li>
+          <li>Does this workflow have adequate feedback and recovery paths?</li>
+          <li>What should remain human-reviewed before automation?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer>
+    Maintained by Lance Amundsen. Published with GitHub Pages.
+  </footer>
 </div>
-
-<p>
-This repository hosts the main custom GPT built around the PV-PP framework. It is intended as the first and most comprehensive entry point for understanding the model, exploring its logic, and applying it to real decision environments involving individuals, institutions, systems, and AI agents.
-</p>
-
-<p>
-Where conventional models often reduce choices to a single score, the PV-PP framework examines governing domains, thresholds, corridors of viability, productive power, perceived productive power, regime shifts, and structured action selection. The result is a broader decision architecture designed to better explain how real systems succeed, fail, adapt, distort, or collapse under pressure.
-</p>
-
-<div class="buttons">
-<a href="https://chatgpt.com/g/g-69c115a5b5a081918bb89c23f6b20446-pv-pp-agent-decision-engine/" target="_blank">Launch GPT</a>
-
-<a class="secondary" href="https://github.com/AmundsenLance/PV-PP-Agent-Decision-Layer" target="_blank">Repository</a>
-
-<a class="secondary" href="https://amundsenlance.github.io/" target="_blank">Main Research Hub</a>
-</div>
-
-</div>
-
-
-
-<div class="section">
-
-<div class="grid">
-
-<div class="card">
-<h3>What It Can Do</h3>
-
-<ul>
-<li>Explain the PV-PP framework in plain English or technical terms</li>
-<li>Analyze decisions using thresholds, domains, and corridors</li>
-<li>Compare PV-PP reasoning against scalar utility models</li>
-<li>Interpret benchmarks and simulations</li>
-<li>Explore AI governance, incentives, failure states, and recovery logic</li>
-<li>Apply the framework to economics, addiction, institutions, and behavior</li>
-</ul>
-</div>
-
-
-
-<div class="card">
-<h3>Why It Matters</h3>
-
-<p>
-Many systems appear rational until conditions change. A single-score optimizer may look effective while quietly damaging recovery capacity, resilience, trust, safety, or future options. PV-PP is designed to surface those hidden losses before collapse becomes visible.
-</p>
-
-<p>
-This GPT serves as a working interface for that broader view.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="section">
-
-<div class="card">
-
-<h3>Suggested Starting Questions</h3>
-
-<ul>
-<li>Explain the PV-PP framework simply.</li>
-<li>How is PV-PP different from utility maximization?</li>
-<li>What is perceived productive power (PPP)?</li>
-<li>How would PV-PP analyze addiction recovery?</li>
-<li>How can PV-PP improve AI decision systems?</li>
-<li>What are governing domains and viable corridors?</li>
-</ul>
-
-</div>
-
-</div>
-
-
-
-<footer>
-Maintained by Lance Amundsen. Published with GitHub Pages.
-</footer>
-
-</div>
-
 </body>
 </html>
-
