@@ -81,39 +81,6 @@ ul {
   padding-left: 22px;
   line-height: 1.7;
 }
-.audit-flow {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-top: 18px;
-}
-.step {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 14px;
-  padding: 20px;
-}
-.step-number {
-  display: inline-block;
-  background: #111;
-  color: white;
-  font-weight: bold;
-  border-radius: 999px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  margin-bottom: 10px;
-}
-.step h4 {
-  margin: 0 0 8px;
-  font-size: 1.05rem;
-}
-.step p {
-  margin: 0;
-  font-size: .98rem;
-  color: #444;
-}
 footer {
   margin-top: 42px;
   padding-top: 20px;
@@ -122,8 +89,7 @@ footer {
   font-size: .95rem;
 }
 @media (max-width: 900px) {
-  .grid,
-  .audit-flow {
+  .grid {
     grid-template-columns: 1fr;
   }
   h1 {
@@ -140,13 +106,13 @@ footer {
   <div class="hero">
     <h1>PV-PP Agent Auditor</h1>
     <div class="subtitle">
-      Productive Value-Productive Power (PV-PP) based audit tool for new and existing AI agent environments
+      A PV-PP based audit tool for reviewing AI agents before they are expanded, automated, or relied on.
     </div>
     <p>
-      The PV-PP Agent Auditor is a custom GPT built on the Productive Value-Productive Power (PV-PP) framework to help users examine an existing AI agent environment before they expand, automate, or rely on it. It guides the user through a structured audit of what the agent is trying to do, what information it uses, what decisions it makes, and where its perceived state may diverge from reality.
+      The PV-PP Agent Auditor is a custom GPT built on the Productive Value-Productive Power (PV-PP) framework. It helps users examine an AI agent environment by looking at what the agent is supposed to do, what information it uses, what tools and permissions it has, and where its apparent capability may exceed what the surrounding system can safely support.
     </p>
     <p>
-      The audit focuses on tools, memory, permissions, constraints, feedback loops, hidden assumptions, failure modes, and weak corridors. Its purpose is not to certify an agent as safe or complete, but to surface places where the system may overestimate its own productive power, act from incomplete information, or operate without adequate recovery structure.
+      The auditor does not certify an agent as safe. It helps surface hidden risks involving tools, memory, permissions, stale information, feedback loops, escalation paths, recovery structure, and false confidence before the agent is expanded or placed into heavier use.
     </p>
     <div class="buttons">
       <a href="https://chatgpt.com/g/g-69c115a5b5a081918bb89c23f6b20446-pv-pp-agent-decision-engine/" target="_blank">Run the Auditor</a>
@@ -154,88 +120,37 @@ footer {
       <a class="secondary" href="https://amundsenlance.github.io/" target="_blank">Main Research Hub</a>
     </div>
   </div>
+
   <div class="section">
     <div class="grid">
       <div class="card">
         <h3>What It Audits</h3>
         <ul>
-          <li>Agent purpose, scope, and intended operating environment</li>
-          <li>Available tools, APIs, permissions, and execution authority</li>
+          <li>Agent purpose, scope, and operating environment</li>
+          <li>Tools, APIs, permissions, and execution authority</li>
           <li>Memory, stored context, retrieval assumptions, and stale-state risks</li>
-          <li>Input quality, missing information, and false confidence points</li>
+          <li>Input quality, missing information, and false-confidence points</li>
           <li>Decision surfaces where the agent may act from an incomplete model</li>
           <li>Feedback loops, monitoring, escalation paths, and recovery options</li>
           <li>Failure modes involving overreach, unsafe automation, or hidden dependency</li>
         </ul>
       </div>
+
       <div class="card">
         <h3>Why It Matters</h3>
         <p>
-          Agent systems often look capable because they can produce fluent answers or trigger tools. That does not mean they understand the real operating environment, know when their information is stale, or have enough feedback to recover from error.
+          Agent systems can look capable because they produce fluent answers or trigger tools. That does not mean they understand their operating environment, know when information is stale, or have enough feedback to recover from error.
         </p>
         <p>
-          The PV-PP Agent Auditor uses the concept of Perceived Productive Power (PPP) (distinction between actual capability and perceived capabiiy)to ask where an agent may believe it can act safely when the surrounding system does not support that belief.
+          The auditor focuses on the gap between apparent capability and supported capability: where an agent may seem ready to act, but the surrounding workflow, permissions, evidence, oversight, or recovery structure does not actually support safe operation.
         </p>
       </div>
     </div>
   </div>
-  <div class="section">
-    <div class="card">
-      <h3>Audit Flow</h3>
-      <div class="audit-flow">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h4>Map the Agent</h4>
-          <p>Identify the agent’s job, users, tools, memory, permissions, and environment.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <h4>Find the Real Capacity</h4>
-          <p>Separate what the agent can actually do from what it appears to be able to do.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <h4>Test the Corridors</h4>
-          <p>Check whether the agent has viable paths for task success, correction, escalation, and recovery.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">4</div>
-          <h4>Surface Failure Modes</h4>
-          <p>Identify overreach, missing feedback, unsafe tool use, weak constraints, and hidden assumptions.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section">
-    <div class="grid">
-      <div class="card">
-        <h3>What You Can Use It For</h3>
-        <ul>
-          <li>Audit a prototype agent before deployment</li>
-          <li>Review a custom GPT or tool-using workflow</li>
-          <li>Identify memory, permission, and feedback risks</li>
-          <li>Compare intended capability against actual capability</li>
-          <li>Prepare an agent architecture for safer automation</li>
-          <li>Clarify where human review or escalation remains necessary</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Suggested Starting Questions</h3>
-        <ul>
-          <li>Audit my current AI agent environment.</li>
-          <li>Where might this agent overestimate its own capability?</li>
-          <li>What tools or permissions create the largest failure risk?</li>
-          <li>Where is the agent acting from stale or incomplete information?</li>
-          <li>Does this workflow have adequate feedback and recovery paths?</li>
-          <li>What should remain human-reviewed before automation?</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+
   <footer>
     Maintained by Lance Amundsen. Published with GitHub Pages.
   </footer>
 </div>
 </body>
 </html>
-PV-PP
