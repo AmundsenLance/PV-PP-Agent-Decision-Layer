@@ -8,6 +8,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -15,11 +16,13 @@ body {
   background: #f4f6f8;
   color: #222;
 }
+
 .wrapper {
   max-width: 1100px;
   margin: 0 auto;
   padding: 50px 28px 70px;
 }
+
 .hero {
   background: white;
   border: 1px solid #ddd;
@@ -27,26 +30,34 @@ body {
   padding: 42px;
   box-shadow: 0 10px 24px rgba(0,0,0,.05);
 }
+
 h1 {
   margin: 0 0 14px;
   font-size: 3rem;
   line-height: 1.1;
 }
+
 .subtitle {
   font-size: 1.2rem;
   color: #555;
   margin-bottom: 24px;
+  max-width: 900px;
 }
+
 p {
   line-height: 1.7;
   font-size: 1.08rem;
 }
+
 .buttons {
-  margin-top: 26px;
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
+
 .buttons a {
   display: inline-block;
-  margin: 0 12px 12px 0;
   padding: 12px 18px;
   border-radius: 8px;
   background: #111;
@@ -54,33 +65,57 @@ p {
   text-decoration: none;
   font-weight: bold;
 }
+
+.buttons a.sample {
+  background: #2f4f6f;
+}
+
 .buttons a.secondary {
   background: #666;
 }
+
 .section {
   margin-top: 34px;
 }
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   margin-top: 18px;
 }
+
 .card {
   background: white;
   border: 1px solid #ddd;
   border-radius: 14px;
   padding: 24px;
 }
+
 .card h3 {
   margin-top: 0;
   margin-bottom: 12px;
   font-size: 1.35rem;
 }
+
 ul {
   padding-left: 22px;
   line-height: 1.7;
 }
+
+.note {
+  margin-top: 28px;
+  background: #eef3f8;
+  border: 1px solid #d6e1ec;
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.note strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
 footer {
   margin-top: 42px;
   padding-top: 20px;
@@ -88,40 +123,70 @@ footer {
   color: #666;
   font-size: .95rem;
 }
+
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: 1fr;
   }
+
   h1 {
     font-size: 2.3rem;
   }
+
   .hero {
     padding: 28px;
+  }
+
+  .buttons {
+    display: block;
+  }
+
+  .buttons a {
+    margin: 0 0 12px 0;
+    width: 100%;
+    text-align: center;
   }
 }
 </style>
 </head>
+
 <body>
 <div class="wrapper">
+
   <div class="hero">
     <h1>PV-PP Agent Auditor</h1>
+
     <div class="subtitle">
       A Productive Value-Productive Power (PV-PP) based audit tool for reviewing AI agents before they are expanded, automated, or relied on.
     </div>
+
     <p>
       The PV-PP Agent Auditor is a custom GPT built on the Productive Value-Productive Power (PV-PP) framework. It helps users examine an AI agent environment by looking at what the agent is supposed to do, what information it uses, what tools and permissions it has, and where its apparent capability may exceed what the surrounding system can safely support.
     </p>
+
     <p>
       The auditor does not certify an agent as safe. It helps surface hidden risks involving tools, memory, permissions, stale information, feedback loops, escalation paths, recovery structure, and false confidence before the agent is expanded or placed into heavier use.
     </p>
+
+    <p>
+      A sample audit report is available so users can review the kind of output the auditor produces before running it. The sample shows how the auditor identifies hidden assumptions, weak control points, false-success risks, authority-boundary problems, and agent-governance gaps.
+    </p>
+
     <div class="buttons">
       <a href="https://chatgpt.com/g/g-69c115a5b5a081918bb89c23f6b20446-pv-pp-agent-decision-engine/" target="_blank">Run the Auditor</a>
+      <a class="sample" href="https://amundsenlance.github.io/Sample-PV-PP-Agent-Auditor-Report/" target="_blank">Read Sample Report</a>
       <a class="secondary" href="https://amundsenlance.github.io/" target="_blank">Main Research Hub</a>
+    </div>
+
+    <div class="note">
+      <strong>Use case:</strong>
+      First-pass review of an AI agent, workflow, automation, or tool-using system before it is expanded, delegated more authority, or relied on in a higher-risk setting.
     </div>
   </div>
 
   <div class="section">
     <div class="grid">
+
       <div class="card">
         <h3>What It Audits</h3>
         <ul>
@@ -144,26 +209,14 @@ footer {
           The auditor focuses on the gap between apparent capability and supported capability: where an agent may seem ready to act, but the surrounding workflow, permissions, evidence, oversight, or recovery structure does not actually support safe operation.
         </p>
       </div>
+
     </div>
   </div>
 
-<div class="card">
-<div class="badge dark">AUDIT</div>
-<h3>Sample PV-PP Agent Auditor Report</h3>
-<p>
-A sample report of a fictitious company produced by the PV-PP Agent Auditor. The report demonstrates how the auditor identifies hidden assumptions, weak corridors, false-success risks, authority-boundary problems, and agent-governance gaps before deployment or expanded reliance.
-</p>
-<div class="links">
-<a href="https://amundsenlance.github.io/Sample-PV-PP-Agent-Auditor-Report/" target="_blank">Read Report</a>
-</div>
-</div>
-
-
-
-  
   <footer>
     Maintained by Lance Amundsen. Published with GitHub Pages.
   </footer>
+
 </div>
 </body>
 </html>
